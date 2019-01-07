@@ -32,7 +32,7 @@ let package = Package(
 		.package(url: "https://github.com/PerfectlySoft/Perfect-LinuxBridge.git", from: "3.0.0")
 	],
  	targets: [
-		.target(name: "PerfectHTTP", dependencies: ["PerfectLib", "PerfectNet", "LinuxBridge"]),
+        .target(name: "PerfectHTTP", dependencies: ["PerfectLib", "PerfectNet", "LinuxBridge"], path: "Sources/PerfectHTTP"),
 		.testTarget(name: "PerfectHTTPTests", dependencies: ["PerfectHTTP", "PerfectNet"])
   ]
 )
@@ -46,7 +46,7 @@ let package = Package(
 		.package(url: "https://github.com/ryancoyne/PerfectLib.git", from: "4.0.0"),
 		.package(url: "https://github.com/ryancoyne/Perfect-Net.git", from: "4.0.0")
 	], targets: [
-		.target(name: "PerfectHTTP", dependencies: ["PerfectLib", "PerfectNet"]),
+        .target(name: "PerfectHTTP", dependencies: ["PerfectLib", "PerfectNet"], path: "Sources/PerfectHTTP"),
 		.testTarget(name: "PerfectHTTPTests", dependencies: ["PerfectHTTP", "PerfectNet"])
   ]
 )
